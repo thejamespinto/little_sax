@@ -1,0 +1,44 @@
+inherit_from:
+  - .rubocop_todo.yml
+
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  ExtraDetails: true
+  EnabledByDefault: true
+  UseCache: true
+  CacheRootDirectory: ~
+  TargetRubyVersion: 2.4
+  Include:
+    - '**/*.gemspec'
+    - '**/*.rake'
+    - '**/Gemfile'
+    - '**/Guardfile'
+    - '**/Rakefile'
+    - '**/Vagrantfile'
+
+# By Namespace
+Style:
+  Enabled: true
+Rails:
+  Enabled: false
+Metrics:
+  Enabled: true
+Performance:
+  Enabled: true
+Layout:
+  Enabled: true
+
+# Custom Values
+Metrics/LineLength:
+  Max: 120
+
+# Enabled
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+# Disabled
+Style/Copyright:
+  Enabled: false
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
