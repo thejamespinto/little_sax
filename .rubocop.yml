@@ -42,3 +42,10 @@ Style/Copyright:
   Enabled: false
 Style/MethodCallWithArgsParentheses:
   Enabled: false
+Style/MissingElse:
+  Enabled: false
+Style/IfInsideElse:
+  Enabled: false
+
+Lint/AssignmentInCondition:
+  Enabled: false

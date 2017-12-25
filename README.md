@@ -1,8 +1,11 @@
 # LittleSax
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/little_sax`. To experiment with that code, run `bin/console` for an interactive prompt.
+LittleSax is a very small gem that doesn't blow up your memory when parsing large XML files.
 
-TODO: Delete this and the text above, and describe your gem
+It's still in very early development.
+
+If you are reading this, please, come and help.
+
 
 ## Installation
 
@@ -22,7 +25,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+TODO: Write better docs.
+
+
+```ruby
+LittleSax.parse_file(path, 'url') do |saxy_string, i|
+
+  # http://www.example.com/
+  puts saxy_string.match(/<loc.*>(.*)<\/loc>/).to_a[1..-1].to_s
+
+  # http://www.example.com/
+  puts saxy_string.sax_node_value('loc'))
+
+  # 2005-01-01
+  puts saxy_string.sax_node_value('lastmod')
+
+  # 0.8
+  puts saxy_string.sax_node_value('priority')
+end
+```
+
 
 ## Development
 
@@ -32,7 +54,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/little_sax. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/thejamespinto/little_sax. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -40,4 +62,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the LittleSax project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/little_sax/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the LittleSax project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/thejamespinto/little_sax/blob/master/CODE_OF_CONDUCT.md).

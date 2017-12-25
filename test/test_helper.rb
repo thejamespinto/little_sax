@@ -1,6 +1,13 @@
 # frozen_string_literal: true
 
-$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'pathname'
+
+root = Pathname(__FILE__).join('../..')
+ROOT = root.join('lib')
+TEST_ROOT = root.join('test')
+$LOAD_PATH.unshift(ROOT)
+
 require 'little_sax'
+require 'colorize'
 
 require 'minitest/autorun'

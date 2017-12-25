@@ -7,6 +7,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.3.0)
+    colorize (0.8.1)
     minitest (5.10.3)
     parallel (1.11.2)
     parser (2.4.0.2)
@@ -30,6 +31,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
+  colorize
   little_sax!
   minitest (~> 5.0)
   rake (~> 10.0)
